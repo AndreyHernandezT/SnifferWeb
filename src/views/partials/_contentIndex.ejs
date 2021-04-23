@@ -21,8 +21,10 @@
                         <div class="form-group row">
                             <div class="col align-self-center text-center">
                                 <h4>Pulsa aquí para buscar las interfaces de red de tu computador</h4>
-                                <button type=" button " id="interfaces " class="btn btn-success"><i class="fa fa-search "> </i>   Buscar</button>
-                            </div>
+                                <form action="/tarjeta" method="post">
+                                    <button type=" submit " id="interfaces " class="btn btn-success"><i class="fa fa-search "> </i>   Buscar</button>
+                                </form>
+                                </div>
                             <div class="col-sm-3">
                                 <table class="table table-striped table-hover ">
                                     <thead>
@@ -50,7 +52,7 @@
                         </div>
                         <br>
 
-                        <form class="m-0 was-validated " onsubmit="return false;">
+                        <form class="m-0 was-validated " action="/snif" method="post">
                             <h4>Configuración del Análisis de Red</h4>
                             <div class="m-0 form-group row ">
                                 <div class="col-sm ">

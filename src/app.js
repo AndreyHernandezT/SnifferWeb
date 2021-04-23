@@ -4,9 +4,9 @@ const routes = require('./routes/routes');
 
 
 const morgan = require('morgan');
-//const mysql = require('mysql');
-//const myConnection = require('express-myconnection');
-//const { urlencoded } = require('express');
+const mysql = require('mysql');
+const myConnection = require('express-myconnection');
+const { urlencoded } = require('express');
 
 //include
 const express = require('express')
@@ -22,13 +22,13 @@ app.use(express.static(__dirname + '/public'));
 
 //middlewares
 app.use(morgan('dev'));
-/* app.use(myConnection(mysql, {
+app.use(myConnection(mysql, {
     host: 'localhost',
     user: 'root',
     password: '',
     port: 3306,
-    database: 'prueba_web'
-}, 'single')) */
+    database: 'sniffer'
+}, 'single')) 
 
 app.use(express.urlencoded({
     extended: false
@@ -39,5 +39,5 @@ app.use('/', routes);
 
 //run
 app.listen(app.get('port'), () => {
-    console.log('server on port 3054');
+    console.log('server on port 3012');
 });

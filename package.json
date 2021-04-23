@@ -22,5 +22,13 @@
   "devDependencies": {
     "nodemon": "^2.0.7"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndreyHernandezT/SnifferWeb.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AndreyHernandezT/SnifferWeb/issues"
+  },
+  "homepage": "https://github.com/AndreyHernandezT/SnifferWeb#readme",
   "description": ""
 }
