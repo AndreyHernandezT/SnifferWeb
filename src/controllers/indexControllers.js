@@ -16,6 +16,7 @@ controller.tarjeta = (req, res) => {
             res.render('index', {
                 tarjetas: rows
             });
+           
         });
     });
 };

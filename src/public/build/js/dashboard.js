@@ -1,34 +1,5 @@
 let timeover = null;
 // Temporizador
-function getData() {
-    var tiempoInicial = document.getElementById("tiempoDeter").value;
-    let time = tiempoInicial * 60;
-    let interfaz = document.getElementById("ElegirInter").value;
-
-    if (tiempoInicial > 0 & interfaz > 0) {
-        var stop = setInterval(updateCountdown, 1000);
-
-        function updateCountdown() {
-            const minutos = ('0' + Math.floor(time / 60)).slice(-2);
-            const segundos = ('0' + time % 60).slice(-2);
-
-            if (time >= 0) {
-                tiempoRes.innerHTML = 'Tiempo Restante: ' + `${minutos}:${segundos}`;
-                document.getElementById("aceptar").disabled = true;
-                document.getElementById("tiempoDeter").disabled = true;
-                document.getElementById("ElegirInter").disabled = true;
-                time--;
-            } else {
-                document.getElementById("aceptar").disabled = false;
-                document.getElementById("tiempoDeter").disabled = false;
-                document.getElementById("ElegirInter").disabled = false;
-                timeover = true;
-                clearInterval(stop);
-            }
-            return;
-        }
-    } //return bandera;
-}
 
 var myChart = new Chart(document.getElementById("myChart"), {
     type: "pie",
