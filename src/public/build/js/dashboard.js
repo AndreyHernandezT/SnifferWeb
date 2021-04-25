@@ -1,3 +1,4 @@
+let timeover = null;
 // Temporizador
 function getData() {
     var tiempoInicial = document.getElementById("tiempoDeter").value;
@@ -21,6 +22,7 @@ function getData() {
                 document.getElementById("aceptar").disabled = false;
                 document.getElementById("tiempoDeter").disabled = false;
                 document.getElementById("ElegirInter").disabled = false;
+                timeover = true;
                 clearInterval(stop);
             }
             return;

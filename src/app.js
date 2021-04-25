@@ -2,10 +2,9 @@
 const path = require('path');
 const routes = require('./routes/routes');
 
-
 const morgan = require('morgan');
 const mysql = require('mysql');
-const myConnection = require('express-myconnection');
+const myConnectionSniff = require('express-myconnection');
 const { urlencoded } = require('express');
 
 //include
@@ -22,13 +21,14 @@ app.use(express.static(__dirname + '/public'));
 
 //middlewares
 app.use(morgan('dev'));
-app.use(myConnection(mysql, {
+
+app.use(myConnectionSniff(mysql, {
     host: 'localhost',
     user: 'root',
     password: '',
     port: 3306,
     database: 'sniffer'
-}, 'single')) 
+}, 'single'))
 
 app.use(express.urlencoded({
     extended: false
